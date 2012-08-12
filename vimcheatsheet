@@ -1,0 +1,11 @@
+
+
+Tabs:
+vim -p file1 file2 file3
+:tabnew filename
+:tabf   file*
+:tabn, :tabp, gt
+:tabfirst, :tablast
+:tabs
+:tabdo %s/foo/bar/g
+
