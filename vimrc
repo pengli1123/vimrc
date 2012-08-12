@@ -1,3 +1,6 @@
+
+call pathogen#infect()
+
 set nocompatible
 
 set backspace=indent,eol,start
@@ -33,6 +36,7 @@ set wrap
 set textwidth=80
 colorschem desert
 
+set showtabline=2
 map Q gq
 set mouse=a
 
@@ -65,3 +69,4 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 
 nmap <F8> :TagbarToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
