@@ -1,0 +1,3 @@
+[submodule "submodules/tagbar"]
+	path = submodules/tagbar
+	url = https://github.com/majutsushi/tagbar
