@@ -27,3 +27,5 @@ copy .\submodules\tagbar\syntax\tagbar.vim %1%\syntax\
 copy .\submodules\tagbar\doc\tagbar.txt %1%\doc\
 
 copy .\imports\ctags58\ctags.exe %windir%\
+
+copy .\vimrc %1%\
