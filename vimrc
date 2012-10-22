@@ -70,3 +70,6 @@ command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 
 nmap <F8> :TagbarToggle<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+cmap tn tabnew
+
