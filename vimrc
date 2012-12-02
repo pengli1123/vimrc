@@ -65,11 +65,20 @@ else
  set autoindent
 endif " has("autocmd")
 
+if has("gui_running")
+    set lines=76 columns=200
+endif
+
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_compact = 1
+autocmd Filetype * nested :call tagbar#autoopen(0)  " auto open tagbar
+set tags=./tags,tags   "set tag file path
+
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 cmap tn tabnew
+
 
