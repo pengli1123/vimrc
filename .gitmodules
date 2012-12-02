@@ -10,3 +10,6 @@
 [submodule "submodules/nerdtree"]
 	path = submodules/nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule "submodules/align"]
+	path = submodules/align
+	url = https://github.com/vim-scripts/Align.git
