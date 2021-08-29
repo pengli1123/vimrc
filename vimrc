@@ -1,7 +1,6 @@
 
-call pathogen#infect()
-
 set nocompatible
+filetype off
 
 set backspace=indent,eol,start
 
@@ -32,8 +31,13 @@ set expandtab
 
 set hlsearch
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 set wrap
 set textwidth=80
+
 colorschem desert
 
 set showtabline=2
@@ -159,13 +163,40 @@ endif
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 
-nmap <F8> :TagbarToggle<CR>
-let g:tagbar_compact = 1
-autocmd Filetype * nested :call tagbar#autoopen(0)  " auto open tagbar
-set tags=./tags,tags   "set tag file path
-
-nnoremap <C-n> :NERDTreeToggle<CR>
 
 cmap tn tabnew
 
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+" Bundle 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let g:SimpylFold_docstring_preview=1
+
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+let python_highlight_all=1
+
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
