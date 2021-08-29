@@ -38,6 +38,8 @@ set foldlevel=99
 set wrap
 set textwidth=80
 
+set noswapfile
+
 colorschem desert
 
 set showtabline=2
