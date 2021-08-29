@@ -175,13 +175,38 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-" Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'VundleVim/Vundle.vim'
+
+"git interface
+Plugin 'tpope/vim-fugitive'
+
+"filesystem
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kien/ctrlp.vim' 
+
+"html
+"  isnowfy only compatible with python not python3
+"Plugin 'isnowfy/python-vim-instant-markdown'
+"Plugin 'jtratner/vim-flavored-markdown'
+"Plugin 'suan/vim-instant-markdown'
+"Plugin 'nelstrom/vim-markdown-preview'
+
+"python sytax checker
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/Pydiction'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/syntastic'
+
+"auto-completion stuff
+Plugin 'klen/python-mode'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'klen/rope-vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
+
+""code folding
+Plugin 'tmhedberg/SimpylFold'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
